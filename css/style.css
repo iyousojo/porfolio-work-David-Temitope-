@@ -7,6 +7,74 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+:root {
+  --primary-bright: #00f2ff; /* Brighter Cyan */
+  --accent-glow: #7000ff;   /* Electric Purple */
+  --text-main: #ffffff;
+  --bg-dark: #050505;
+}
+
+body {
+  background: var(--bg-dark);
+}
+
+/* Update Hero and Accents */
+.hero-text h1 span {
+  color: var(--primary-bright);
+  text-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+}
+
+.hero-btn, .submit-btn {
+  background: linear-gradient(45deg, var(--primary-bright), var(--accent-glow));
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 242, 255, 0.3);
+}
+
+.hero-btn:hover, .submit-btn:hover {
+  filter: brightness(1.2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 242, 255, 0.5);
+}
+
+/* Service Card Styles (Clickable) */
+.service-card {
+  display: block; /* Makes the entire anchor a block */
+  text-decoration: none !important;
+  color: inherit;
+  background: #111;
+  border: 1px solid #222;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card:hover {
+  border-color: var(--primary-bright);
+  background: #161616;
+}
+
+.learn-more {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--primary-bright);
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.service-card:hover .learn-more {
+  padding-left: 10px;
+}
+
+/* Section Title Underline */
+.section-title::after {
+  background: linear-gradient(90deg, var(--primary-bright), var(--accent-glow));
+}
 
 /* REMOVE ALL UNDERLINES FROM LINKS - FOREVER */
 a, a:hover, a:visited, a:active {

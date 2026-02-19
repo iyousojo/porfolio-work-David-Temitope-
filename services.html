@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights & Services - David Temitope</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-bright: #00f2ff;
+      --accent-glow: #7000ff;
+      --card-bg: #161616;
+    }
+
+    .blog-container {
+      max-width: 900px;
+      margin: 120px auto;
+      padding: 0 20px;
+    }
+
+    .blog-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .blog-post {
+      background: var(--card-bg);
+      border-radius: 24px;
+      padding: 40px;
+      margin-bottom: 60px;
+      border: 1px solid #222;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-post:hover {
+      border-color: var(--primary-bright);
+    }
+
+    .post-meta {
+      display: flex;
+      gap: 15px;
+      color: var(--primary-bright);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .blog-post h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .blog-post p {
+      line-height: 1.8;
+      color: #ccc;
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    .blog-post ul {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .blog-post ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #222;
+      color: #eee;
+    }
+
+    .blog-post ul li::before {
+      content: "▹";
+      color: var(--primary-bright);
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .cta-link {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(45deg, var(--primary-bright), var(--accent-glow));
+      color: #fff;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .cta-link:hover {
+      box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    .back-home {
+      color: #888;
+      display: inline-block;
+      margin-bottom: 40px;
+      transition: 0.3s;
+    }
+    .back-home:hover { color: var(--primary-bright); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="nav-brand-right">David Temitope</a>
+</nav>
+
+<div class="blog-container">
+    <a href="index.html" class="back-home">← Back to Portfolio</a>
+    
+    <header class="blog-header" data-aos="fade-down">
+        <h1 class="section-title">Service Insights</h1>
+        <p>A deep dive into how I help my clients succeed in the digital economy.</p>
+    </header>
+
+    <article id="trading" class="blog-post" data-aos="fade-up">
+        <div class="post-meta">
+            <span>Trading</span> • <span>5 Min Read</span>
+        </div>
+        <h2>Mastering the Markets: Crypto Strategy</h2>
+        <p>
+            In the volatile world of cryptocurrency, guessing is a recipe for disaster. My approach to trading is built on <strong>Technical Analysis</strong> and strict <strong>Risk Management</strong>. I don't just look for "moon shots"; I look for sustainable entries based on market structure and liquidity.
+        </p>
+        <ul>
+            <li>Personalized Portfolio Allocation</li>
+            <li>Spot and Futures Trading Guidance</li>
+            <li>Risk-to-Reward Ratio Optimization</li>
+        </ul>
+        <a href="index.html#contact" class="cta-link">Request a Consultation</a>
+    </article>
+
+    <article id="marketing" class="blog-post" data-aos="fade-up">
+        <div class="post-meta">
+            <span>Marketing</span> • <span>4 Min Read</span>
+        </div>
+        <h2>Building Brands in a Digital-First World</h2>
+        <p>
+            Digital marketing is no longer just about posting; it's about <strong>Attention Management</strong>. I help brands cut through the noise by creating content that resonates. Whether it's organic growth on X (Twitter) or targeted ad campaigns, the goal is always ROI.
+        </p>
+        <ul>
+            <li>Content Strategy & Copywriting</li>
+            <li>Community Management (Telegram/Discord)</li>
+            <li>Social Media Analytics & Growth</li>
+        </ul>
+        <a href="index.html#contact" class="cta-link">Grow Your Brand</a>
+    </article>
+
+    <article id="design" class="blog-post" data-aos="fade-up">
+        <article class="post-meta">
+            <span>Design</span> • <span>3 Min Read</span>
+        </article>
+        <h2>Design That Converts</h2>
+        <p>
+            Good design is invisible, but <strong>great design</strong> is unforgettable. I focus on creating visuals that aren't just "pretty"—they are functional. From high-conversion flyers for events to sleek logos that define a brand's identity, I use Photoshop and Canva to bring your vision to life.
+        </p>
+        <ul>
+            <li>Brand Identity & Logo Design</li>
+            <li>Social Media Graphics</li>
+            <li>Print-Ready Posters & Flyers</li>
+        </ul>
+        <a href="index.html#contact" class="cta-link">Start a Design Project</a>
+    </article>
+
+    <article id="security" class="blog-post" data-aos="fade-up">
+        <div class="post-meta">
+            <span>Security</span> • <span>6 Min Read</span>
+        </div>
+        <h2>The Fortress: Wallet Security</h2>
+        <p>
+            "Not your keys, not your coins." This is the golden rule of crypto. I provide a comprehensive security audit and setup service to ensure your digital assets are safe from hackers and scams.
+        </p>
+        <ul>
+            <li>Hardware Wallet Onboarding</li>
+            <li>Seed Phrase Security Best Practices</li>
+            <li>Revoking Malicious Smart Contracts</li>
+        </ul>
+        <a href="index.html#contact" class="cta-link">Secure Your Assets</a>
+    </article>
+
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
