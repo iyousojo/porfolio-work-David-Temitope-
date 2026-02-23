@@ -389,7 +389,7 @@ a, a:hover, a:visited, a:active {
 .contact-info h3 { font-size: 2.2rem; color: #fff; margin-bottom: 16px; }
 .contact-info p { color: #aaa; margin-bottom: 30px; font-size: 1.1rem; }
 .contact-details p { margin: 14px 0; color: #ccc; }
-.contact-details strong { color: #00c6ff; }
+.contact-details strong { color: #783737; }
 .social-contact { margin-top: 30px; display: flex; gap: 16px; flex-wrap: wrap; }
 .social-btn {
   padding: 12px 24px;
@@ -417,7 +417,7 @@ a, a:hover, a:visited, a:active {
 .submit-btn {
   align-self: flex-start;
   padding: 14px 40px;
-  background: #00c6ff;
+  background: #6c2424;
   color: #000;
   font-weight: bold;
   border: none;
@@ -426,9 +426,9 @@ a, a:hover, a:visited, a:active {
   transition: 0.3s;
 }
 .submit-btn:hover {
-  background: #00eaff;
+  background: #9b4242;
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0,198,255,0.4);
+  box-shadow: 0 10px 30px rgba(207, 15, 15, 0.4);
 }
 
 .footer {
@@ -449,7 +449,7 @@ a, a:hover, a:visited, a:active {
 .footer-left h3 { color: #fff; font-size: 1.6rem; margin-bottom: 10px; }
 .social-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 .social-links a { padding: 10px 20px; background: #1a1a1a; color: #aaa; border-radius: 50px; transition: all 0.3s; }
-.social-links a:hover { background: #00c6ff; color: #000; }
+.social-links a:hover { background: #4e3739; color: #000; }
 .footer-bottom { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #222; color: #666; }
 
 @media (max-width: 900px) {
