@@ -2,16 +2,16 @@
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #0a0a0a;
+  background: #700707;
   color: #e0e0e0;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 :root {
-  --primary-bright: #00f2ff; /* Brighter Cyan */
-  --accent-glow: #7000ff;   /* Electric Purple */
+  --primary-bright: #ae2f3c; /* Brighter Cyan */
+  --accent-glow: #7b1a35;   /* Electric Purple */
   --text-main: #ffffff;
-  --bg-dark: #050505;
+  --bg-dark: #815656;
 }
 
 body {
@@ -21,20 +21,20 @@ body {
 /* Update Hero and Accents */
 .hero-text h1 span {
   color: var(--primary-bright);
-  text-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+  text-shadow: 0 0 20px rgba(142, 63, 63, 0.555);
 }
 
 .hero-btn, .submit-btn {
   background: linear-gradient(45deg, var(--primary-bright), var(--accent-glow));
   color: #fff;
   border: none;
-  box-shadow: 0 4px 15px rgba(0, 242, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 0, 21, 0.3);
 }
 
 .hero-btn:hover, .submit-btn:hover {
   filter: brightness(1.2);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 242, 255, 0.5);
+  box-shadow: 0 8px 25px rgba(146, 43, 43, 0.5);
 }
 
 /* Service Card Styles (Clickable) */
@@ -42,7 +42,7 @@ body {
   display: block; /* Makes the entire anchor a block */
   text-decoration: none !important;
   color: inherit;
-  background: #111;
+  background: #d35b5b;
   border: 1px solid #222;
   position: relative;
   overflow: hidden;
@@ -55,7 +55,7 @@ body {
 
 .service-card:hover {
   border-color: var(--primary-bright);
-  background: #161616;
+  background: #852e2e;
 }
 
 .learn-more {
@@ -86,7 +86,7 @@ a, a:hover, a:visited, a:active {
 .navbar {
   position: fixed;
   top: 0; left: 0; width: 100%;
-  background: rgba(31,31,31,0.97);
+  background: rgba(141, 77, 77, 0.97);
   padding: 16px 24px;
   display: flex;
   justify-content: flex-start;
@@ -110,7 +110,7 @@ a, a:hover, a:visited, a:active {
   display: flex;
   gap: 40px;
   padding: 16px 32px 16px 52px;
-  background: #2a2a2a;
+  background: #7e5252;
   border-radius: 60px;
   overflow: hidden;
   width: 420px;
@@ -138,7 +138,7 @@ a, a:hover, a:visited, a:active {
 .nav-links:hover {
   width: 620px;
   padding-right: 50px;
-  background: #333;
+  background: #5e4a4a;
 }
 
 .nav-links:hover a:nth-child(n+4) {
@@ -147,7 +147,7 @@ a, a:hover, a:visited, a:active {
   padding: 0 10px;
 }
 
-.nav-links a:hover { color: #00c6ff; }
+.nav-links a:hover { color: #493131; }
 
 .nav-links::after {
   content: "⋯";
@@ -213,7 +213,7 @@ a, a:hover, a:visited, a:active {
     transform: translateX(-50%);
     width: 88%;
     max-width: 340px;
-    background: #1a1a1a;
+    background: #984c4c;
     border-radius: 20px;
     padding: 0;
     margin-top: 14px;
@@ -250,8 +250,8 @@ a, a:hover, a:visited, a:active {
   }
 
   .mobile-only-menu a:hover {
-    background: rgba(0,198,255,0.2);
-    color: #00c6ff;
+    background: rgba(255, 7, 7, 0.2);
+    color: #804658;
     border-radius: 12px;
     margin: 0 20px;
   }
@@ -268,7 +268,7 @@ a, a:hover, a:visited, a:active {
 .hero-section {
   padding-top: 120px;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+  background: linear-gradient(135deg, #582b2b 0%, #c0c0c7 100%);
   display: flex;
   align-items: center;
   text-align: center;
@@ -288,7 +288,7 @@ a, a:hover, a:visited, a:active {
   line-height: 1.1;
 }
 
-.hero-text h1 span { color: #00c6ff; }
+.hero-text h1 span { color: #7b4b53; }
 
 .hero-subtitle {
   font-size: clamp(1rem, 3vw, 1.25rem);
@@ -300,7 +300,7 @@ a, a:hover, a:visited, a:active {
 
 .hero-btn {
   padding: 14px 32px;
-  background: #00c6ff;
+  background: #a8373e;
   color: #000;
   font-weight: bold;
   border-radius: 50px;
@@ -309,7 +309,7 @@ a, a:hover, a:visited, a:active {
 }
 
 .hero-btn:hover {
-  background: #00eaff;
+  background: #825d68;
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,198,255,0.3);
 }
@@ -333,14 +333,14 @@ a, a:hover, a:visited, a:active {
   content: '';
   width: 80px;
   height: 4px;
-  background: #00c6ff;
+  background: #815656;
   display: block;
   margin: 20px auto;
   border-radius: 2px;
 }
 
-.services-section, .projects-section, .about-section { background: #111; padding: 120px 5%; }
-.skills-section, .contact-section { background: #0d0d0d; padding: 120px 5%; }
+.services-section, .projects-section, .about-section { background: #815656; padding: 120px 5%; }
+.skills-section, .contact-section { background: #815656; padding: 120px 5%; }
 
 .services-container, .skills-grid, .projects-container {
   max-width: 1300px; margin: 0 auto;
@@ -351,7 +351,7 @@ a, a:hover, a:visited, a:active {
 }
 
 .service-card, .project-card, .skill-box {
-  background: #1a1a1a;
+  background: #726f6f;
   padding: 32px;
   border-radius: 18px;
   border: 1px solid #222;
@@ -359,7 +359,7 @@ a, a:hover, a:visited, a:active {
 }
 .service-card:hover, .project-card:hover {
   transform: translateY(-12px);
-  background: #1f1f1f;
+  background: #6d6767;
   border-color: #00c6ff;
   box-shadow: 0 20px 40px rgba(0,198,255,0.1);
 }
@@ -403,7 +403,7 @@ a, a:hover, a:visited, a:active {
 .contact-form form { display: flex; flex-direction: column; gap: 20px; }
 .contact-form input, .contact-form textarea {
   padding: 16px;
-  background: #1a1a1a;
+  background: #815656;
   border: 1px solid #333;
   border-radius: 12px;
   color: #fff;
@@ -432,7 +432,7 @@ a, a:hover, a:visited, a:active {
 }
 
 .footer {
-  background: #0a0a0a;
+  background: #815656;
   padding: 80px 5% 40px;
   border-top: 1px solid #222;
   margin-top: 100px;
