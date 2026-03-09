@@ -3,205 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>David Temitope Portfolio</title>
+  <title>David Temitope | Crypto & Design</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="burger-custom">
-    <span class="line"></span>
-    <span class="line"></span>
-    <span class="line"></span>
-  </label>
+  <!-- 1. NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="logo">David.</div>
+    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
 
-  <div class="nav-links">
-    <a href="#home" class="nav-link">Home</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#services" class="nav-link">Services</a>
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </div>
-
-  <div class="mobile-only-menu">
-    <a href="#home" class="nav-link">Home</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#services" class="nav-link">Services</a>
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </div>
-
-  <div class="nav-brand-right">David Temitope Portfolio</div>
-</nav>
-
-<!-- HERO -->
-<section id="home" class="hero-section">
-  <div class="hero-content">
-    <div class="hero-text" data-aos="fade-right">
-      <h1 class="hero-title">David Temitope<br><span>Omolagba</span></h1>
-      <p class="hero-subtitle">Crypto Trading • Digital Marketing • Graphics Design • Wallet Security Guidance</p>
-      <a href="#services" class="hero-btn">Explore My Services</a>
+    <!-- The Sidebar Menu -->
+    <div class="nav-links" id="nav-menu">
+      <div class="close-menu" id="close-menu"><i class="fas fa-times"></i></div>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Work</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Contact</a>
     </div>
-    <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
-      <img src="Images/banner.png" alt="David Temitope">
-    </div>
-  </div>
-</section>
+  </nav>
 
-<!-- ABOUT ME -->
-<section id="about" class="about-section">
-  <h2 class="section-title" data-aos="fade-up">About Me</h2>
-  <div class="about-container">
-    <div class="about-image" data-aos="fade-right">
-      <img src="Images/about.jpeg" alt="David Temitope">
-    </div>
-    <div class="about-text" data-aos="fade-left">
-      <h3>Hi, I'm David Temitope Omolagba</h3>
-      <p>I'm a passionate Crypto Trader, Digital Marketer, and Graphics Designer based in Lagos, Nigeria.</p>
-      <p>With years of hands-on experience in the crypto space, I help individuals and businesses navigate the world of digital assets safely and profitably.</p>
-      <p>My mission is simple: empower people with the right knowledge and tools to succeed in crypto trading, grow their online presence through smart marketing, and create stunning visuals that stand out.</p>
-      <div class="about-stats">
-        <div class="stat"><strong>5+</strong><span>Years Experience</span></div>
-        <div class="stat"><strong>200+</strong><span>Happy Clients</span></div>
-        <div class="stat"><strong>50+</strong><span>Projects Delivered</span></div>
+  <!-- 2. BLUR OVERLAY (Outside the nav) -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- 3. HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text" data-aos="fade-right">
+        <h1>Hi,<br>I'm <span>David</span><br>Digital marketer</h1>
+        <p class="hero-subtitle">Crypto trader and graphic designer specializing in blockchain ecosystems.</p>
+        <a href="#contact" class="hero-btn">Contact Me</a>
+        
+        <div style="margin-top: 40px; display: flex; gap: 20px; font-size: 1.3rem;">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-behance"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <div class="hero-image" data-aos="fade-left">
+        <img src="Images/about.jpeg" alt="David Temitope">
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SERVICES -->
-<section id="services" class="services-section">
-  <h2 class="section-title" data-aos="fade-up">Services</h2>
-  <div class="services-container">
-    <a href="services.html" class="service-card" data-aos="fade-up" data-aos-delay="100">
-      <div class="service-icon">📈</div>
-      <h3>Crypto Trading & Portfolio Management</h3>
-      <p>I help clients analyze markets, manage risk, and build profitable crypto portfolios.</p>
-      <span class="learn-more">Learn More →</span>
-    </a>
-
-    <a href="services.html" class="service-card" data-aos="fade-up" data-aos-delay="200">
-      <div class="service-icon">🚀</div>
-      <h3>Digital Marketing & Social Media</h3>
-      <p>Grow your online presence with content creation, strategy, and analytics.</p>
-      <span class="learn-more">Learn More →</span>
-    </a>
-
-    <a href="services.html" class="service-card" data-aos="fade-up" data-aos-delay="300">
-      <div class="service-icon">🎨</div>
-      <h3>Graphics Design</h3>
-      <p>Logos, flyers, posters, and clean brand graphics using Photoshop & Canva.</p>
-      <span class="learn-more">Learn More →</span>
-    </a>
-
-    <a href="services.html" class="service-card" data-aos="fade-up" data-aos-delay="400">
-      <div class="service-icon">🛡️</div>
-      <h3>Crypto Wallet Setup & Security</h3>
-      <p>Safe wallet setup, key management, and basic crypto security guidance.</p>
-      <span class="learn-more">Learn More →</span>
-    </a>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="skills-section">
-  <h2 class="section-title" data-aos="fade-up">Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-box" data-aos="zoom-in" data-aos-delay="100"><h4>Crypto Trading</h4><ul><li>Portfolio Management</li><li>Technical Analysis</li><li>Risk Management</li><li>Market Research</li></ul></div>
-    <div class="skill-box" data-aos="zoom-in" data-aos-delay="200"><h4>Digital Marketing</h4><ul><li>Content Creation</li><li>Social Media Management</li><li>SEO Basics</li><li>Ad Strategy</li></ul></div>
-    <div class="skill-box" data-aos="zoom-in" data-aos-delay="300"><h4>Graphics Design</h4><ul><li>Photoshop / Canva</li><li>Logo Design</li><li>Flyers & Posters</li><li>Branding Basics</li></ul></div>
-    <div class="skill-box" data-aos="zoom-in" data-aos-delay="400"><h4>Wallet Security</h4><ul><li>Wallet Setup</li><li>Private Key Handling</li><li>Basic Wallet Security</li><li>Safe Storage Guidelines</li></ul></div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="projects-section">
-  <h2 class="section-title" data-aos="fade-up">Projects</h2>
-  <div class="projects-container">
-    <div class="project-card" data-aos="flip-left" data-aos-delay="100"><h3>Risk-Level Trading Strategy Tool</h3><p>A crypto trading system that categorizes risk levels and guides portfolio decisions.</p></div>
-    <div class="project-card" data-aos="flip-left" data-aos-delay="200"><h3>Digital Marketing Campaign Plan</h3><p>A complete marketing strategy built for small businesses to grow online.</p></div>
-    <div class="project-card" data-aos="flip-left" data-aos-delay="300"><h3>Flyer & Poster Design Collection</h3><p>A set of modern branding designs created using Photoshop and Canva.</p></div>
-    <div class="project-card" data-aos="flip-left" data-aos-delay="400"><h3>Crypto Wallet Setup Tutorial Guide</h3><p>A simple, visual guide teaching beginners how to safely set up crypto wallets.</p></div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact-section">
-  <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
-  <div class="contact-container">
-    <div class="contact-info" data-aos="fade-right">
-      <h3>Let's Work Together</h3>
-      <p>I'm open to collaboration, consultations, or just a chat about crypto, marketing, or design.</p>
-      <div class="contact-details">
-        <p><strong>Email:</strong>omolagbadavid03@gmail.com : </p>
-        <p><strong>Telegram:</strong> @Oba_Flames</p>
-        <p><strong>WhatsApp:</strong> +234 7054012572</p>
-        <p><strong>Location:</strong> Lagos, Nigeria</p>
+  <!-- 4. SERVICES -->
+  <section id="services">
+    <h2 class="section-title">My <span>Services</span></h2>
+    <div class="grid">
+      <div class="card" data-aos="fade-up">
+        <i class="fas fa-chart-line"></i>
+        <h3>Crypto Trading</h3>
+        <p>Analyzing market behavior and identifying strategic opportunities.</p>
+        <a href="services.html#crypto-trading" class="learn-more" style="color: var(--primary-blue); font-weight: 600; text-decoration: none;">Learn More →</a>
       </div>
-      <div class="social-contact">
-        <a href="#" class="social-btn">Twitter</a>
-        <a href="#" class="social-btn">LinkedIn</a>
-        <a href="#" class="social-btn">Telegram</a>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Digital Marketing</h3>
+        <p>Boosting brand visibility through data-driven online strategies.</p>
+        <a href="services.html#digital-marketing" class="learn-more" style="color: var(--primary-blue); font-weight: 600; text-decoration: none;">Learn More →</a>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-pen-nib"></i>
+        <h3>Graphic Design</h3>
+        <p>Creating clean, modern branding and digital graphics.</p>
+        <a href="services.html#graphic-design" class="learn-more" style="color: var(--primary-blue); font-weight: 600; text-decoration: none;">Learn More →</a>
       </div>
     </div>
-    <div class="contact-form" data-aos="fade-left">
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <input type="text" placeholder="Subject" required>
-        <textarea rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit" class="submit-btn">Send Message</button>
-      </form>
+  </section>
+
+  <!-- 5. PROJECTS -->
+  <section id="projects">
+    <h2 class="section-title">Selected <span>Work</span></h2>
+    <div class="grid">
+      <div class="card project-card" data-aos="zoom-in">
+        <div class="project-img-container">
+          <img src="Images/photo(1).jpg" alt="BTC Analysis" class="project-img">
+        </div>
+        <div class="project-info">
+          <h3>BTC/USDT Analysis</h3>
+          <p>Technical analysis on a 15-minute timeframe identifying bullish breakouts.</p>
+          <span class="tag">Bybit</span>
+        </div>
+      </div>
+      <div class="card project-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="project-img-container">
+          <img src="Images/photo.jpg" alt="Token Acquisition" class="project-img">
+        </div>
+        <div class="project-info">
+          <h3>Token Acquisition</h3>
+          <p>Executing secure token swaps through Bitget and DEXs.</p>
+          <span class="tag">Bitget</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- 6. CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Let's <span>Connect</span></h2>
+    <div class="contact-container">
+      
+      <div class="contact-info" data-aos="fade-right">
+        <h3>Have a project in mind?</h3>
+        <p>Reach out directly via email. I usually respond within 24 hours.</p>
+        <div class="contact-details">
+            <p><i class="fas fa-envelope"></i> omolagbadavid03@gmail.com</p>
+        </div>
+      </div>
+
+      <form action="https://formspree.io/f/xojkjwlr" method="POST" class="contact-form" data-aos="fade-left">
+  <div class="input-group">
+    <!-- Use the 'name' attribute so Formspree knows what data is what -->
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+  </div>
+  <input type="text" name="subject" placeholder="Subject">
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  
+  <!-- Formspree needs this hidden input to prevent spam on the free tier -->
+  <input type="text" name="_gotcha" style="display:none">
+  
+  <button type="submit" class="hero-btn">Send Message</button>
+</form>
+
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-left">
-      <h3>David Temitope Omolagba</h3>
-      <p>Crypto Trading • Digital Marketing • Graphics Design • Wallet Security</p>
-    </div>
-    <div class="footer-center">
-      <p>Let's Connect</p>
-      <div class="social-links">
-        <a href="#">Twitter</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Telegram</a>
-        <a href="#">Email</a>
-      </div>
-    </div>
-    <div class="footer-right">
-      <p>© 2025 David Temitope Portfolio. All rights reserved.</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>Made with Love & Code</p>
-  </div>
-</footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const closeMenu = document.getElementById('close-menu');
+    const navMenu = document.getElementById('nav-menu');
+    const overlay = document.getElementById('nav-overlay');
+    const navLinks = document.querySelectorAll('.nav-links a');
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ once: true, duration: 800, easing: 'ease-out-cubic' });
-
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.getElementById('menu-toggle').checked = false;
-      const target = document.querySelector(this.getAttribute('href'));
-      window.scrollTo({
-        top: target.offsetTop - 90,
-        behavior: 'smooth'
-      });
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.add('active');
+      overlay.classList.add('active');
+      document.body.classList.add('menu-open'); // Stop scroll
     });
-  });
-</script>
 
+    const hideMenu = () => {
+      navMenu.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.classList.remove('menu-open'); // Allow scroll
+    };
+
+    closeMenu.addEventListener('click', hideMenu);
+    overlay.addEventListener('click', hideMenu);
+    navLinks.forEach(link => link.addEventListener('click', hideMenu));
+
+    AOS.init({ duration: 1000, once: true });
+  </script>
 </body>
 </html>

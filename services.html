@@ -3,187 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insights & Services - David Temitope</title>
+  <title>Services | David Temitope</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    :root {
-      --primary-bright: #00f2ff;
-      --accent-glow: #7000ff;
-      --card-bg: #161616;
+    .service-detail-container { max-width: 1100px; margin: 120px auto; padding: 0 8%; }
+    .back-btn { color: var(--text-grey); margin-bottom: 30px; display: inline-block; transition: 0.3s; text-decoration: none; }
+    .back-btn:hover { color: var(--primary-blue); transform: translateX(-5px); }
+    
+    .detail-post { 
+      background: var(--white); 
+      border-radius: 30px; 
+      padding: 60px; 
+      margin-bottom: 60px; 
+      box-shadow: 0 15px 50px rgba(0,0,0,0.04);
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Image on one side, text on the other */
+      gap: 40px;
+      align-items: center;
     }
 
-    .blog-container {
-      max-width: 900px;
-      margin: 120px auto;
-      padding: 0 20px;
+    .detail-image img {
+      width: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(74, 108, 247, 0.15);
     }
 
-    .blog-header {
-      text-align: center;
-      margin-bottom: 80px;
-    }
-
-    .blog-post {
-      background: var(--card-bg);
-      border-radius: 24px;
-      padding: 40px;
-      margin-bottom: 60px;
-      border: 1px solid #222;
-      transition: transform 0.3s ease;
-    }
-
-    .blog-post:hover {
-      border-color: var(--primary-bright);
-    }
-
-    .post-meta {
-      display: flex;
-      gap: 15px;
-      color: var(--primary-bright);
-      font-size: 0.85rem;
+    .detail-post i { font-size: 3rem; color: var(--primary-blue); margin-bottom: 20px; display: block; }
+    .detail-post h2 { font-size: 2.2rem; margin-bottom: 20px; font-weight: 800; line-height: 1.2; }
+    .detail-post p { font-size: 1.1rem; color: var(--text-grey); margin-bottom: 25px; line-height: 1.8; }
+    
+    .feature-list { list-style: none; padding: 0; }
+    .feature-list li { margin: 12px 0; display: flex; align-items: center; gap: 12px; font-weight: 600; color: var(--text-dark); }
+    .feature-list li i { font-size: 1rem; color: var(--primary-blue); margin-bottom: 0; display: inline; }
+    
+    .service-cta { 
+      margin-top: 30px; 
+      display: inline-block; 
+      background: var(--primary-blue); 
+      color: white; 
+      padding: 14px 35px; 
+      border-radius: 12px; 
       font-weight: 600;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-      letter-spacing: 1px;
-    }
-
-    .blog-post h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-
-    .blog-post p {
-      line-height: 1.8;
-      color: #ccc;
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-    }
-
-    .blog-post ul {
-      list-style: none;
-      margin-bottom: 25px;
-    }
-
-    .blog-post ul li {
-      padding: 10px 0;
-      border-bottom: 1px solid #222;
-      color: #eee;
-    }
-
-    .blog-post ul li::before {
-      content: "▹";
-      color: var(--primary-bright);
-      margin-right: 10px;
-      font-weight: bold;
-    }
-
-    .cta-link {
-      display: inline-block;
-      padding: 12px 25px;
-      background: linear-gradient(45deg, var(--primary-bright), var(--accent-glow));
-      color: #fff;
-      border-radius: 50px;
-      font-weight: bold;
+      text-decoration: none;
       transition: 0.3s;
     }
+    .service-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(74, 108, 247, 0.3); }
 
-    .cta-link:hover {
-      box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
-      transform: scale(1.05);
+    /* DESIGN GALLERY */
+    .design-gallery { margin-top: 100px; text-align: center; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
     }
+    .gallery-item {
+      height: 300px;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: 0.5s;
+    }
+    .gallery-item:hover img { transform: scale(1.1); }
 
-    .back-home {
-      color: #888;
-      display: inline-block;
-      margin-bottom: 40px;
-      transition: 0.3s;
+    @media (max-width: 900px) {
+      .detail-post { grid-template-columns: 1fr; padding: 40px; }
+      .detail-image { order: -1; } /* Image on top for mobile */
     }
-    .back-home:hover { color: var(--primary-bright); }
   </style>
 </head>
 <body>
 
-<nav class="navbar">
-    <a href="index.html" class="nav-brand-right">David Temitope</a>
-</nav>
-
-<div class="blog-container">
-    <a href="index.html" class="back-home">← Back to Portfolio</a>
+<div class="service-detail-container">
+    <a href="index.html" class="back-btn">← Back to Portfolio</a>
     
-    <header class="blog-header" data-aos="fade-down">
-        <h1 class="section-title">Service Insights</h1>
-        <p>A deep dive into how I help my clients succeed in the digital economy.</p>
+    <header style="text-align: center; margin-bottom: 80px;" data-aos="fade-down">
+        <h1 class="section-title">Service <span>Insights</span></h1>
+        <p>Expert solutions tailored for the blockchain and creative industries.</p>
     </header>
 
-    <article id="trading" class="blog-post" data-aos="fade-up">
-        <div class="post-meta">
-            <span>Trading</span> • <span>5 Min Read</span>
+    <!-- TRADING -->
+    <article id="trading" class="detail-post" data-aos="fade-up">
+        <div class="detail-text">
+            <i class="fas fa-chart-line"></i>
+            <h2>Mastering the Markets: Crypto Strategy</h2>
+            <p>I provide data-driven trading strategies focusing on Technical Analysis and strict Risk Management to navigate market volatility.</p>
+            <ul class="feature-list">
+                <li><i class="fas fa-check-circle"></i> Portfolio Allocation</li>
+                <li><i class="fas fa-check-circle"></i> Spot & Futures Guidance</li>
+                <li><i class="fas fa-check-circle"></i> Risk-to-Reward Metrics</li>
+            </ul>
+            <a href="index.html#contact" class="service-cta">Get Started</a>
         </div>
-        <h2>Mastering the Markets: Crypto Strategy</h2>
-        <p>
-            In the volatile world of cryptocurrency, guessing is a recipe for disaster. My approach to trading is built on <strong>Technical Analysis</strong> and strict <strong>Risk Management</strong>. I don't just look for "moon shots"; I look for sustainable entries based on market structure and liquidity.
-        </p>
-        <ul>
-            <li>Personalized Portfolio Allocation</li>
-            <li>Spot and Futures Trading Guidance</li>
-            <li>Risk-to-Reward Ratio Optimization</li>
-        </ul>
-        <a href="index.html#contact" class="cta-link">Request a Consultation</a>
-    </article>
-
-    <article id="marketing" class="blog-post" data-aos="fade-up">
-        <div class="post-meta">
-            <span>Marketing</span> • <span>4 Min Read</span>
+        <div class="detail-image">
+            <!-- Replace with your trading chart screenshot -->
+            <img src="Images/photo2.jpg" alt="Crypto Trading Analysis">
         </div>
-        <h2>Building Brands in a Digital-First World</h2>
-        <p>
-            Digital marketing is no longer just about posting; it's about <strong>Attention Management</strong>. I help brands cut through the noise by creating content that resonates. Whether it's organic growth on X (Twitter) or targeted ad campaigns, the goal is always ROI.
-        </p>
-        <ul>
-            <li>Content Strategy & Copywriting</li>
-            <li>Community Management (Telegram/Discord)</li>
-            <li>Social Media Analytics & Growth</li>
-        </ul>
-        <a href="index.html#contact" class="cta-link">Grow Your Brand</a>
     </article>
 
-    <article id="design" class="blog-post" data-aos="fade-up">
-        <article class="post-meta">
-            <span>Design</span> • <span>3 Min Read</span>
-        </article>
-        <h2>Design That Converts</h2>
-        <p>
-            Good design is invisible, but <strong>great design</strong> is unforgettable. I focus on creating visuals that aren't just "pretty"—they are functional. From high-conversion flyers for events to sleek logos that define a brand's identity, I use Photoshop and Canva to bring your vision to life.
-        </p>
-        <ul>
-            <li>Brand Identity & Logo Design</li>
-            <li>Social Media Graphics</li>
-            <li>Print-Ready Posters & Flyers</li>
-        </ul>
-        <a href="index.html#contact" class="cta-link">Start a Design Project</a>
-    </article>
-
-    <article id="security" class="blog-post" data-aos="fade-up">
-        <div class="post-meta">
-            <span>Security</span> • <span>6 Min Read</span>
+    <!-- MARKETING -->
+    <article id="marketing" class="detail-post" data-aos="fade-up">
+        <div class="detail-image">
+            <!-- Replace with a marketing/social media graphic -->
+            <img src="Images/photo_2026-03-09_12-09-40.jpg" alt="Digital Marketing Strategy">
         </div>
-        <h2>The Fortress: Wallet Security</h2>
-        <p>
-            "Not your keys, not your coins." This is the golden rule of crypto. I provide a comprehensive security audit and setup service to ensure your digital assets are safe from hackers and scams.
-        </p>
-        <ul>
-            <li>Hardware Wallet Onboarding</li>
-            <li>Seed Phrase Security Best Practices</li>
-            <li>Revoking Malicious Smart Contracts</li>
-        </ul>
-        <a href="index.html#contact" class="cta-link">Secure Your Assets</a>
+        <div class="detail-text">
+            <i class="fas fa-bullhorn"></i>
+            <h2>Building Brands in a Digital World</h2>
+            <p>Attention is the new currency. I help brands grow through strategic content and community management on platforms like X and Telegram.</p>
+            <ul class="feature-list">
+                <li><i class="fas fa-check-circle"></i> Content Strategy</li>
+                <li><i class="fas fa-check-circle"></i> Community Management</li>
+                <li><i class="fas fa-check-circle"></i> Growth Analytics</li>
+            </ul>
+            <a href="index.html#contact" class="service-cta">Grow Your Brand</a>
+        </div>
     </article>
 
+    <!-- DESIGN -->
+    <article id="design" class="detail-post" data-aos="fade-up">
+        <div class="detail-text">
+            <i class="fas fa-pen-nib"></i>
+            <h2>Design That Converts</h2>
+            <p>Visual storytelling that defines your brand identity. I create professional graphics designed to engage and convert your audience.</p>
+            <ul class="feature-list">
+                <li><i class="fas fa-check-circle"></i> Brand Identity & Logos</li>
+                <li><i class="fas fa-check-circle"></i> Social Media Graphics</li>
+                <li><i class="fas fa-check-circle"></i> Professional Print Assets</li>
+            </ul>
+            <a href="index.html#contact" class="service-cta">Start a Project</a>
+        </div>
+        <div class="detail-image">
+            <!-- Replace with your best design work -->
+            <img src="Images/photo_2026-03-09_12-10-48.jpg" alt="Graphic Design Portfolio">
+        </div>
+    </article>
+
+    <!-- DESIGN GALLERY SECTION -->
+    <section class="design-gallery" data-aos="fade-up">
+        <h2 class="section-title">Design <span>Showcase</span></h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="Images/photo_2026-03-09_12-11-51.jpg" alt="Design 1"></div>
+            <div class="gallery-item"><img src="Images/photo_2026-03-09_12-13-20.jpg" alt="Design 2"></div>
+            <div class="gallery-item"><img src="Images/photo_2026-03-09_12-14-00.jpg" alt="Design 3"></div>
+            <div class="gallery-item"><img src="Images/photo_2026-03-09_12-15-00.jpg" alt="Design 4"></div>
+        </div>
+    </section>
 </div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({ duration: 800, once: true });</script>
+<script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
