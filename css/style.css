@@ -59,14 +59,14 @@ body {
     right: -100%; 
     width: 75%; 
     height: 100vh;
-    background: var(--white); /* SOLID Background ensures blur doesn't bleed through */
+    background: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
     transition: 0.4s var(--transition);
-    z-index: 1050; /* HIGHEST LAYER */
+    z-index: 1050; /* Sidebar on top */
     box-shadow: -10px 0 30px rgba(0,0,0,0.1);
   }
 
@@ -79,7 +79,6 @@ body {
     right: 25px;
   }
 
-  /* Blur Overlay */
   .nav-overlay {
     position: fixed;
     top: 0;
@@ -88,7 +87,7 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(8px);
-    z-index: 140; /* BELOW SIDEBAR, ABOVE PAGE */
+    z-index: 1040; /* Corrected from 140 to 1040 */
     opacity: 0;
     visibility: hidden;
     transition: 0.4s ease;
@@ -113,6 +112,7 @@ body {
 .hero-btn {
   display: inline-block; background: var(--primary-blue); color: white;
   padding: 16px 40px; border-radius: 8px; text-decoration: none; font-weight: 600;
+  border: none; cursor: pointer;
 }
 
 /* --- GRID & CARDS --- */
@@ -122,10 +122,7 @@ section { padding: 80px 8%; }
 .card { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
 .card i { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px; display: block; }
 
-/* --- CONTACT --- */
-./* --- CONTACT SECTION STYLES --- */
-
-/* --- PROJECTS SECTION --- */
+/* --- PROJECTS --- */
 .project-card { 
   padding: 0; 
   overflow: hidden; 
@@ -135,124 +132,77 @@ section { padding: 80px 8%; }
 
 .project-img-container { 
   width: 100%; 
-  height: 250px; /* Force a specific height */
+  height: 250px; 
   overflow: hidden; 
-  background: #eee; /* Placeholder color while loading */
+  background: #eee;
 }
 
 .project-img { 
   width: 100%; 
   height: 100%; 
-  object-fit: cover; /* This crops the image to fit the 250px height perfectly */
-  object-position: center; /* Keeps the center of the photo visible */
+  object-fit: cover; 
+  object-position: center; 
   transition: var(--transition); 
 }
 
-.project-card:hover .project-img { 
-  transform: scale(1.05); 
-}
+.project-card:hover .project-img { transform: scale(1.05); }
 
-.project-info { 
-  padding: 20px; 
-  background: var(--white);
-}
-
-.project-info h3 {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-}
+.project-info { padding: 20px; background: var(--white); }
+.project-info h3 { font-size: 1.25rem; margin-bottom: 10px; }
 
 .tag { 
-  font-size: 0.75rem; 
-  font-weight: 800; 
-  color: var(--primary-blue); 
-  text-transform: uppercase; 
-  letter-spacing: 1px;
+  font-size: 0.75rem; font-weight: 800; color: var(--primary-blue); 
+  text-transform: uppercase; letter-spacing: 1px;
 }
+
+/* --- CONTACT --- */
+#contact { background: var(--white); }
+
 .contact-container {
   display: grid;
-  grid-template-columns: 1fr 1.5fr; /* Sidebar for info, larger area for form */
+  grid-template-columns: 1fr 1.5fr; 
   gap: 60px;
   align-items: start;
 }
 
-.contact-info h3 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: var(--text-dark);
-}
-
-.contact-details {
-  margin-top: 30px;
-}
+.contact-info h3 { font-size: 2rem; margin-bottom: 20px; }
 
 .contact-details p {
-  font-weight: 700;
-  color: var(--primary-blue);
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  font-weight: 700; color: var(--primary-blue);
+  display: flex; align-items: center; gap: 10px; margin-top: 20px;
 }
 
-/* Form Styling */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+.contact-form { display: flex; flex-direction: column; gap: 20px; }
 
 .input-group {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns for Name/Email */
+  grid-template-columns: 1fr 1fr; 
   gap: 20px;
 }
 
 .contact-form input, 
 .contact-form textarea {
-  width: 100%;
-  padding: 18px;
-  border-radius: 12px;
-  border: 1px solid #e1e4ed;
-  background: var(--bg-light);
-  font-family: inherit;
-  font-size: 1rem;
-  transition: var(--transition);
+  width: 100%; padding: 18px; border-radius: 12px;
+  border: 1px solid #e1e4ed; background: var(--bg-light);
+  font-family: inherit; font-size: 1rem; transition: var(--transition);
 }
 
 .contact-form input:focus, 
 .contact-form textarea:focus {
-  border-color: var(--primary-blue);
-  outline: none;
-  background: var(--white);
-  box-shadow: 0 5px 15px rgba(74, 108, 247, 0.1);
+  border-color: var(--primary-blue); outline: none;
+  background: var(--white); box-shadow: 0 5px 15px rgba(74, 108, 247, 0.1);
 }
 
-/* --- RESPONSIVENESS (The Fix) --- */
-
-/* For Tablets (992px and below) */
+/* --- RESPONSIVENESS --- */
 @media (max-width: 992px) {
-  .contact-container {
-    grid-template-columns: 1fr; /* Stack Info and Form vertically */
-    gap: 40px;
-    text-align: center;
-  }
-  
-  .contact-details p {
-    justify-content: center;
-  }
+  .hero-content { grid-template-columns: 1fr; text-align: center; }
+  .hero-image { order: -1; margin: 0 auto; }
+  .contact-container { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .contact-details p { justify-content: center; }
 }
 
-/* For Mobile (768px and below) */
 @media (max-width: 768px) {
-  .input-group {
-    grid-template-columns: 1fr; /* Name and Email stack on top of each other */
-  }
-  
-  #contact {
-    padding: 60px 5%; /* Less side padding on small screens */
-  }
-
-  .contact-info h3 {
-    font-size: 1.7rem;
-  }
+  .input-group { grid-template-columns: 1fr; }
+  section { padding: 60px 5%; }
+  .contact-info h3 { font-size: 1.7rem; }
 }
